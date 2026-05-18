@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Script from "next/script";
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "EduAll - LMS, Tutors, Education & Online Course",
   description: "EduAll - LMS, Tutors, Education & Online Course Html Template",
 };

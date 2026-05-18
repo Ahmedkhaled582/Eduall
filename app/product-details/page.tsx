@@ -1,646 +1,56 @@
-import type { Metadata } from "next";
+import React from 'react';
+import Link from 'next/link';
+import Preloader from '@/components/layout/Preloader';
+import ProgressWrap from '@/components/layout/ProgressWrap';
+import Overlay from '@/components/layout/Overlay';
+import MobileMenu from '@/components/layout/MobileMenu';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/home/Footer';
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "EdullAll - LMS, Tutors, Education & Online Course Html Template",
 };
 
 export default function Page() {
   return (
-    <div
-      suppressHydrationWarning
-      dangerouslySetInnerHTML={{
-        __html: `<!--==================== Preloader Start ====================-->
-  <div class="preloader">
-    <img src="/assets/images/icons/preloader.gif" alt="">
-  </div>
-<!--==================== Preloader End ====================-->
-
-<!--==================== Overlay Start ====================-->
-<div class="overlay"></div>
-<!--==================== Overlay End ====================-->
-
-<!--==================== Sidebar Overlay End ====================-->
-<div class="side-overlay"></div>
-<!--==================== Sidebar Overlay End ====================-->
-
-<!-- ==================== Scroll to Top End Here ==================== -->
-<div class="progress-wrap">
-  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-  </svg>
-</div>
-<!-- ==================== Scroll to Top End Here ==================== -->
-
-<!-- ==================== Mobile Menu Start Here ==================== -->
-<div class="mobile-menu scroll-sm d-lg-none d-block">
-    <button type="button" class="close-button"><i class="ph ph-x"></i> </button>
-    <div class="mobile-menu__inner">
-        <a href="/" class="mobile-menu__logo">
-            <img src="/assets/images/logo/logo.png" alt="Logo">
-        </a>
-        <div class="mobile-menu__menu">
-            
-<ul class="nav-menu flex-align nav-menu--mobile">
-    <li class="nav-menu__item has-submenu activePage">
-        <a href="javascript:void(0)" class="nav-menu__link">Home</a>
-        <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item activePage">
-                <a href="/" class="nav-submenu__link hover-bg-neutral-30"> Home LMS</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-2" class="nav-submenu__link hover-bg-neutral-30"> Home Online Course</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-3" class="nav-submenu__link hover-bg-neutral-30"> Home University</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-4" class="nav-submenu__link hover-bg-neutral-30"> Home Tutor</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-5" class="nav-submenu__link hover-bg-neutral-30"> Home Kindergarten</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-6" class="nav-submenu__link hover-bg-neutral-30"> Home Kindergarten two</a>
-            </li>
-        </ul>   
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Courses</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/course" class="nav-submenu__link hover-bg-neutral-30"> Course Grid View</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/course-list-view" class="nav-submenu__link hover-bg-neutral-30"> Course List View</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/course-details" class="nav-submenu__link hover-bg-neutral-30"> Course Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/lesson-details" class="nav-submenu__link hover-bg-neutral-30"> Lesson Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Pages</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/about" class="nav-submenu__link hover-bg-neutral-30"> About</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/about-two" class="nav-submenu__link hover-bg-neutral-30"> About Two</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/about-three" class="nav-submenu__link hover-bg-neutral-30"> About Three</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/about-four" class="nav-submenu__link hover-bg-neutral-30"> About Four</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/pricing-plan" class="nav-submenu__link hover-bg-neutral-30">Pricing Plan</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor" class="nav-submenu__link hover-bg-neutral-30"> Instructor</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-two" class="nav-submenu__link hover-bg-neutral-30"> Instructor Two</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-details" class="nav-submenu__link hover-bg-neutral-30"> Instructor Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/tutor" class="nav-submenu__link hover-bg-neutral-30"> Premium Tutors</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/tutor-details" class="nav-submenu__link hover-bg-neutral-30"> Premium Tutors Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/faq" class="nav-submenu__link hover-bg-neutral-30">FAQ</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/tuition-jobs" class="nav-submenu__link hover-bg-neutral-30">Tuition Jobs</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/events" class="nav-submenu__link hover-bg-neutral-30">Events</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/event-details" class="nav-submenu__link hover-bg-neutral-30">Event Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/apply-admission" class="nav-submenu__link hover-bg-neutral-30">Apply Admission</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/gallery" class="nav-submenu__link hover-bg-neutral-30">Gallery</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/privacy-policy" class="nav-submenu__link hover-bg-neutral-30">Privacy Policy</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/favorite-course" class="nav-submenu__link hover-bg-neutral-30">Favorite Course</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/find-tutors" class="nav-submenu__link hover-bg-neutral-30">Find Best Tutors</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/book-online-class" class="nav-submenu__link hover-bg-neutral-30">Book Online Class</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Dashboard</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/admin-dashbord" class="nav-submenu__link hover-bg-neutral-30"> Admin Dashbord</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/my-profile" class="nav-submenu__link hover-bg-neutral-30">My Profile</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-message" class="nav-submenu__link hover-bg-neutral-30">Message</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-courses" class="nav-submenu__link hover-bg-neutral-30">Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-wishlist" class="nav-submenu__link hover-bg-neutral-30">Wishlist</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/deshbord-reviews" class="nav-submenu__link hover-bg-neutral-30">Reviews</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-settings" class="nav-submenu__link hover-bg-neutral-30">Settings</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord" class="nav-submenu__link hover-bg-neutral-30">Student Admin Dashbord</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-my-profile" class="nav-submenu__link hover-bg-neutral-30">Student My Profile</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-message" class="nav-submenu__link hover-bg-neutral-30">Student Message</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-enrolled-courses" class="nav-submenu__link hover-bg-neutral-30">Student Enrolled Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-wishlist" class="nav-submenu__link hover-bg-neutral-30">Student Wishlist</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-reviews" class="nav-submenu__link hover-bg-neutral-30">Student Reviews</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-my-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Student My Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-assignment" class="nav-submenu__link hover-bg-neutral-30">Student Assignment</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-settings" class="nav-submenu__link hover-bg-neutral-30">Student Settings</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard" class="nav-submenu__link hover-bg-neutral-30">Instructor Dashbord</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-my-profile" class="nav-submenu__link hover-bg-neutral-30">Instructor My Profile</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-message" class="nav-submenu__link hover-bg-neutral-30">Instructor Message</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-enrolled-courses" class="nav-submenu__link hover-bg-neutral-30">Instructor Enrolled Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-wishlist" class="nav-submenu__link hover-bg-neutral-30">Instructor Wishlist</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-reviews" class="nav-submenu__link hover-bg-neutral-30">Instructor Reviews</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-my-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Instructor My Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-order-history" class="nav-submenu__link hover-bg-neutral-30">Instructor Order History</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-my-courses" class="nav-submenu__link hover-bg-neutral-30">Instructor My Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-announcements" class="nav-submenu__link hover-bg-neutral-30">Instructor Announcements</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-assignment" class="nav-submenu__link hover-bg-neutral-30">Instructor Assignment</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Instructor Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-account-settings" class="nav-submenu__link hover-bg-neutral-30">Instructor Account Settings</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Product</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/product" class="nav-submenu__link hover-bg-neutral-30"> Product</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/product-details" class="nav-submenu__link hover-bg-neutral-30"> Product Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/cart" class="nav-submenu__link hover-bg-neutral-30">Cart</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/checkout" class="nav-submenu__link hover-bg-neutral-30">Checkout</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Blog</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/blog" class="nav-submenu__link hover-bg-neutral-30"> Blog Grid</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/blog-list" class="nav-submenu__link hover-bg-neutral-30"> Blog List</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/blog-classic" class="nav-submenu__link hover-bg-neutral-30"> Blog Classic</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/blog-details" class="nav-submenu__link hover-bg-neutral-30"> Blog Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item">
-        <a href="/contact" class="nav-menu__link">Contact</a>
-    </li>
-</ul>
-
-            <div class="d-sm-none d-block mt-24">
-                <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
-    <span class="select-icon d-xxl-block d-none position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
-        <i class="ph-bold ph-squares-four"></i>
-    </span>
-    <select class="js-example-basic-single border-0" name="state">
-        <option value="1" selected disabled>Categories</option>
-        <option value="1">Design</option>
-        <option value="1">Development</option>
-        <option value="1">Architecture</option>
-        <option value="1">Life Style</option>
-        <option value="1">Data Science</option>
-        <option value="1">Marketing</option>
-        <option value="1">Music</option>
-        <option value="1">Typography</option>
-        <option value="1">Finance</option>
-        <option value="1">Motivation</option>
-    </select>
-</div>
-            </div>
-            
-        </div>
-    </div>
-</div>
-<!-- ==================== Mobile Menu End Here ==================== -->
-
-
-    <!-- ==================== Header Start Here ==================== -->
-<header class="header">
-    <div class="container container--xl">
-        <nav class="header-inner flex-between gap-8">
-
-            <div class="header-content-wrapper flex-align flex-grow-1">
-                <!-- Logo Start -->
-                <div class="logo">
-                    <a href="/" class="link">
-                        <img src="/assets/images/logo/logo.png" alt="Logo">
-                    </a>
-                </div>
-                <!-- Logo End  -->
+    <>
+      <Preloader />
+      <div className="side-overlay"></div>
+      <ProgressWrap />
+      <Overlay />
+      <MobileMenu />
+      <Header />
+      
+      {/* ==================== Breadcrumb Start Here ==================== */}
+<section className="breadcrumb py-120 bg-main-25 position-relative z-1 overflow-hidden mb-0">
+    <img src="/assets/images/shapes/shape1.png" alt="" className="shape one animation-rotation d-md-block d-none" />
+    <img src="/assets/images/shapes/shape2.png" alt="" className="shape two animation-scalation d-md-block d-none" />
+    <img src="/assets/images/shapes/shape3.png" alt="" className="shape eight animation-walking d-md-block d-none" />
+    <img src="/assets/images/shapes/shape5.png" alt="" className="shape six animation-walking d-md-block d-none" />
+    <img src="/assets/images/shapes/shape4.png" alt="" className="shape four animation-scalation" />
+    <img src="/assets/images/shapes/shape4.png" alt="" className="shape nine animation-scalation" />
     
-                <!-- Select Start -->
-                <div class="d-sm-block d-none">
-                    <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
-    <span class="select-icon d-xxl-block d-none position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
-        <i class="ph-bold ph-squares-four"></i>
-    </span>
-    <select class="js-example-basic-single border-0" name="state">
-        <option value="1" selected disabled>Categories</option>
-        <option value="1">Design</option>
-        <option value="1">Development</option>
-        <option value="1">Architecture</option>
-        <option value="1">Life Style</option>
-        <option value="1">Data Science</option>
-        <option value="1">Marketing</option>
-        <option value="1">Music</option>
-        <option value="1">Typography</option>
-        <option value="1">Finance</option>
-        <option value="1">Motivation</option>
-    </select>
-</div>
-                </div>
-                <!-- Select End -->
-    
-                <!-- Menu Start  -->
-                <div class="header-menu d-lg-block d-none">
-                    
-<ul class="nav-menu flex-align ">
-    <li class="nav-menu__item has-submenu activePage">
-        <a href="javascript:void(0)" class="nav-menu__link">Home</a>
-        <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item activePage">
-                <a href="/" class="nav-submenu__link hover-bg-neutral-30"> Home LMS</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-2" class="nav-submenu__link hover-bg-neutral-30"> Home Online Course</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-3" class="nav-submenu__link hover-bg-neutral-30"> Home University</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-4" class="nav-submenu__link hover-bg-neutral-30"> Home Tutor</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-5" class="nav-submenu__link hover-bg-neutral-30"> Home Kindergarten</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/index-6" class="nav-submenu__link hover-bg-neutral-30"> Home Kindergarten two</a>
-            </li>
-        </ul>   
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Courses</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/course" class="nav-submenu__link hover-bg-neutral-30"> Course Grid View</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/course-list-view" class="nav-submenu__link hover-bg-neutral-30"> Course List View</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/course-details" class="nav-submenu__link hover-bg-neutral-30"> Course Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/lesson-details" class="nav-submenu__link hover-bg-neutral-30"> Lesson Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Pages</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/about" class="nav-submenu__link hover-bg-neutral-30"> About</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/about-two" class="nav-submenu__link hover-bg-neutral-30"> About Two</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/about-three" class="nav-submenu__link hover-bg-neutral-30"> About Three</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/about-four" class="nav-submenu__link hover-bg-neutral-30"> About Four</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/pricing-plan" class="nav-submenu__link hover-bg-neutral-30">Pricing Plan</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor" class="nav-submenu__link hover-bg-neutral-30"> Instructor</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-two" class="nav-submenu__link hover-bg-neutral-30"> Instructor Two</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-details" class="nav-submenu__link hover-bg-neutral-30"> Instructor Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/tutor" class="nav-submenu__link hover-bg-neutral-30"> Premium Tutors</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/tutor-details" class="nav-submenu__link hover-bg-neutral-30"> Premium Tutors Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/faq" class="nav-submenu__link hover-bg-neutral-30">FAQ</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/tuition-jobs" class="nav-submenu__link hover-bg-neutral-30">Tuition Jobs</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/events" class="nav-submenu__link hover-bg-neutral-30">Events</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/event-details" class="nav-submenu__link hover-bg-neutral-30">Event Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/apply-admission" class="nav-submenu__link hover-bg-neutral-30">Apply Admission</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/gallery" class="nav-submenu__link hover-bg-neutral-30">Gallery</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/privacy-policy" class="nav-submenu__link hover-bg-neutral-30">Privacy Policy</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/favorite-course" class="nav-submenu__link hover-bg-neutral-30">Favorite Course</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/find-tutors" class="nav-submenu__link hover-bg-neutral-30">Find Best Tutors</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/book-online-class" class="nav-submenu__link hover-bg-neutral-30">Book Online Class</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Dashboard</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/admin-dashbord" class="nav-submenu__link hover-bg-neutral-30"> Admin Dashbord</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/my-profile" class="nav-submenu__link hover-bg-neutral-30">My Profile</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-message" class="nav-submenu__link hover-bg-neutral-30">Message</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-courses" class="nav-submenu__link hover-bg-neutral-30">Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-wishlist" class="nav-submenu__link hover-bg-neutral-30">Wishlist</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/deshbord-reviews" class="nav-submenu__link hover-bg-neutral-30">Reviews</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/dashbord-settings" class="nav-submenu__link hover-bg-neutral-30">Settings</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord" class="nav-submenu__link hover-bg-neutral-30">Student Admin Dashbord</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-my-profile" class="nav-submenu__link hover-bg-neutral-30">Student My Profile</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-message" class="nav-submenu__link hover-bg-neutral-30">Student Message</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-enrolled-courses" class="nav-submenu__link hover-bg-neutral-30">Student Enrolled Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-wishlist" class="nav-submenu__link hover-bg-neutral-30">Student Wishlist</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-reviews" class="nav-submenu__link hover-bg-neutral-30">Student Reviews</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-my-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Student My Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-assignment" class="nav-submenu__link hover-bg-neutral-30">Student Assignment</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/student-dashbord-settings" class="nav-submenu__link hover-bg-neutral-30">Student Settings</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard" class="nav-submenu__link hover-bg-neutral-30">Instructor Dashbord</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-my-profile" class="nav-submenu__link hover-bg-neutral-30">Instructor My Profile</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-message" class="nav-submenu__link hover-bg-neutral-30">Instructor Message</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-enrolled-courses" class="nav-submenu__link hover-bg-neutral-30">Instructor Enrolled Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-wishlist" class="nav-submenu__link hover-bg-neutral-30">Instructor Wishlist</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-reviews" class="nav-submenu__link hover-bg-neutral-30">Instructor Reviews</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-my-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Instructor My Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-order-history" class="nav-submenu__link hover-bg-neutral-30">Instructor Order History</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-my-courses" class="nav-submenu__link hover-bg-neutral-30">Instructor My Courses</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-announcements" class="nav-submenu__link hover-bg-neutral-30">Instructor Announcements</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-assignment" class="nav-submenu__link hover-bg-neutral-30">Instructor Assignment</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-quiz-attempts" class="nav-submenu__link hover-bg-neutral-30">Instructor Quiz Attempts</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/instructor-dashboard-account-settings" class="nav-submenu__link hover-bg-neutral-30">Instructor Account Settings</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Product</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/product" class="nav-submenu__link hover-bg-neutral-30"> Product</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/product-details" class="nav-submenu__link hover-bg-neutral-30"> Product Details</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/cart" class="nav-submenu__link hover-bg-neutral-30">Cart</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/checkout" class="nav-submenu__link hover-bg-neutral-30">Checkout</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item has-submenu">
-        <a href="javascript:void(0)" class="nav-menu__link">Blog</a>
-         <ul class="nav-submenu scroll-sm">
-            <li class="nav-submenu__item">
-                <a href="/blog" class="nav-submenu__link hover-bg-neutral-30"> Blog Grid</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/blog-list" class="nav-submenu__link hover-bg-neutral-30"> Blog List</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/blog-classic" class="nav-submenu__link hover-bg-neutral-30"> Blog Classic</a>
-            </li>
-            <li class="nav-submenu__item">
-                <a href="/blog-details" class="nav-submenu__link hover-bg-neutral-30"> Blog Details</a>
-            </li>
-        </ul>
-    </li>
-    <li class="nav-menu__item">
-        <a href="/contact" class="nav-menu__link">Contact</a>
-    </li>
-</ul>
-                </div>
-                <!-- Menu End  -->
-            </div>
-
-            <!-- Header Right start -->
-            <div class="header-right flex-align">
-                <form action="#" class="search-form position-relative d-xl-block d-none">
-                    <input type="text" class="common-input rounded-pill bg-main-25 pe-48 border-neutral-30" placeholder="Search...">
-                    <button type="submit" class="w-36 h-36 bg-main-600 hover-bg-main-700 rounded-circle flex-center text-md text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
-                        <i class="ph-bold ph-magnifying-glass"></i>
-                    </button>
-                </form>
-                <a href="/sign-in" class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl text-neutral-500 hover-text-white hover-border-main-600">
-                    <i class="ph ph-user-circle"></i>
-                </a>
-                <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center">
-                    <i class="ph ph-list"></i> 
-                </button>
-            </div>
-            <!-- Header Right End  -->
-        </nav>
-    </div>
-</header>
-<!-- ==================== Header End Here ==================== -->
-
-    <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb py-120 bg-main-25 position-relative z-1 overflow-hidden mb-0">
-    <img src="/assets/images/shapes/shape1.png" alt="" class="shape one animation-rotation d-md-block d-none">
-    <img src="/assets/images/shapes/shape2.png" alt="" class="shape two animation-scalation d-md-block d-none">
-    <img src="/assets/images/shapes/shape3.png" alt="" class="shape eight animation-walking d-md-block d-none">
-    <img src="/assets/images/shapes/shape5.png" alt="" class="shape six animation-walking d-md-block d-none">
-    <img src="/assets/images/shapes/shape4.png" alt="" class="shape four animation-scalation">
-    <img src="/assets/images/shapes/shape4.png" alt="" class="shape nine animation-scalation">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="breadcrumb__wrapper">
-                    <h1 class="breadcrumb__title display-4 fw-semibold text-center"> Products Details</h1>
-                    <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-4">
-                        <li class="breadcrumb__item">
-                            <a href="/" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> 
-                                <i class="text-lg d-inline-flex ph-bold ph-house"></i> Home</a>
+    <div className="container">
+        <div className="row justify-content-center">
+            <div className="col-lg-8">
+                <div className="breadcrumb__wrapper">
+                    <h1 className="breadcrumb__title display-4 fw-semibold text-center"> Products Details</h1>
+                    <ul className="breadcrumb__list d-flex align-items-center justify-content-center gap-4">
+                        <li className="breadcrumb__item">
+                            <a href="/" className="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> 
+                                <i className="text-lg d-inline-flex ph-bold ph-house"></i> Home</a>
                          </li>
-                        <li class="breadcrumb__item">
-                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        <li className="breadcrumb__item">
+                            <i className="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
                         </li>
-                        <li class="breadcrumb__item">
-                            <a href="/course" class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> </a> 
+                        <li className="breadcrumb__item">
+                            <a href="/course" className="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> </a> 
                         </li>
-                        <li class="breadcrumb__item d-none">
-                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
+                        <li className="breadcrumb__item d-none">
+                            <i className="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
                         </li>
-                        <li class="breadcrumb__item"> 
-                            <span class="text-main-two-600"> Products Details </span> 
+                        <li className="breadcrumb__item"> 
+                            <span className="text-main-two-600"> Products Details </span> 
                         </li>
                     </ul>
                 </div>
@@ -648,142 +58,142 @@ export default function Page() {
         </div>
     </div>
 </section>
-<!-- ==================== Breadcrumb End Here ==================== -->
+{/* ==================== Breadcrumb End Here ==================== */}
 
-    <!-- =============================== Products Details Section Start ================================== -->
-    <section class="py-120">
-        <div class="container">
-            <div class="row gy-4">
-                <div class="col-xxl-6 col-lg-6">
-                    <div class="product-big-thumbs bg-main-25 rounded-12 border border-neutral-30 p-24">
+    {/* =============================== Products Details Section Start ================================== */}
+    <section className="py-120">
+        <div className="container">
+            <div className="row gy-4">
+                <div className="col-xxl-6 col-lg-6">
+                    <div className="product-big-thumbs bg-main-25 rounded-12 border border-neutral-30 p-24">
                         <div>   
-                            <img src="/assets/images/thumbs/product-big-img1.png" alt="">
+                            <img src="/assets/images/thumbs/product-big-img1.png" alt="" />
                         </div>
                         <div>   
-                            <img src="/assets/images/thumbs/product-big-img2.png" alt="">
+                            <img src="/assets/images/thumbs/product-big-img2.png" alt="" />
                         </div>
                         <div>   
-                            <img src="/assets/images/thumbs/product-big-img3.png" alt="">
+                            <img src="/assets/images/thumbs/product-big-img3.png" alt="" />
                         </div>
                         <div>   
-                            <img src="/assets/images/thumbs/product-big-img4.png" alt="">
+                            <img src="/assets/images/thumbs/product-big-img4.png" alt="" />
                         </div>
                         <div>   
-                            <img src="/assets/images/thumbs/product-big-img3.png" alt="">
+                            <img src="/assets/images/thumbs/product-big-img3.png" alt="" />
                         </div>
                     </div>
-                    <div class="mt-24">
-                        <div class="product-small-thumbs">
-                            <div class="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
-                                <img src="/assets/images/thumbs/product-small-img1.png" alt="">
+                    <div className="mt-24">
+                        <div className="product-small-thumbs">
+                            <div className="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
+                                <img src="/assets/images/thumbs/product-small-img1.png" alt="" />
                             </div>
-                            <div class="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
-                                <img src="/assets/images/thumbs/product-small-img2.png" alt="">
+                            <div className="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
+                                <img src="/assets/images/thumbs/product-small-img2.png" alt="" />
                             </div>
-                            <div class="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
-                                <img src="/assets/images/thumbs/product-small-img3.png" alt="">
+                            <div className="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
+                                <img src="/assets/images/thumbs/product-small-img3.png" alt="" />
                             </div>
-                            <div class="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
-                                <img src="/assets/images/thumbs/product-small-img4.png" alt="">
+                            <div className="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
+                                <img src="/assets/images/thumbs/product-small-img4.png" alt="" />
                             </div>
-                            <div class="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
-                                <img src="/assets/images/thumbs/product-small-img3.png" alt="">
+                            <div className="bg-main-25 rounded-8 border border-neutral-30 p-10 d-flex justify-content-center align-items-center">
+                                <img src="/assets/images/thumbs/product-small-img3.png" alt="" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xxl-1 d-xxl-block d-none"></div>
-                <div class="col-xxl-5 col-lg-6">
-                    <div class="">
-                        <div class="d-flex flex-column gap-24 align-items-start">
-                            <span class="py-8 px-16 bg-main-two-600 rounded-8 text-white">Sale</span>
-                            <span class="text-uppercase text-md text-success-600 fw-semibold">IN STOCK</span>
-                            <h3 class="mb-0">Dressy Chair Trendy look.</h3>
-                            <div class="flex-align gap-8">
-                                <div class="flex-align gap-4">
-                                    <span class="text-2xl fw-medium text-warning-600 d-flex">
-                                        <i class="ph-fill ph-star"></i>
+                <div className="col-xxl-1 d-xxl-block d-none"></div>
+                <div className="col-xxl-5 col-lg-6">
+                    <div className="">
+                        <div className="d-flex flex-column gap-24 align-items-start">
+                            <span className="py-8 px-16 bg-main-two-600 rounded-8 text-white">Sale</span>
+                            <span className="text-uppercase text-md text-success-600 fw-semibold">IN STOCK</span>
+                            <h3 className="mb-0">Dressy Chair Trendy look.</h3>
+                            <div className="flex-align gap-8">
+                                <div className="flex-align gap-4">
+                                    <span className="text-2xl fw-medium text-warning-600 d-flex">
+                                        <i className="ph-fill ph-star"></i>
                                     </span>
-                                    <span class="text-2xl fw-medium text-warning-600 d-flex">
-                                        <i class="ph-fill ph-star"></i>
+                                    <span className="text-2xl fw-medium text-warning-600 d-flex">
+                                        <i className="ph-fill ph-star"></i>
                                     </span>
-                                    <span class="text-2xl fw-medium text-warning-600 d-flex">
-                                        <i class="ph-fill ph-star"></i>
+                                    <span className="text-2xl fw-medium text-warning-600 d-flex">
+                                        <i className="ph-fill ph-star"></i>
                                     </span>
-                                    <span class="text-2xl fw-medium text-warning-600 d-flex">
-                                        <i class="ph-fill ph-star"></i>
+                                    <span className="text-2xl fw-medium text-warning-600 d-flex">
+                                        <i className="ph-fill ph-star"></i>
                                     </span>
-                                    <span class="text-2xl fw-medium text-warning-600 d-flex">
-                                        <i class="ph-bold ph-star"></i>
+                                    <span className="text-2xl fw-medium text-warning-600 d-flex">
+                                        <i className="ph-bold ph-star"></i>
                                     </span>
                                 </div>
-                                <span class="text-md text-neutral-500">
+                                <span className="text-md text-neutral-500">
                                     (3.36k reviews)
                                 </span>
                             </div>
-                            <h3 class="mb-0 text-main-600">$95.25</h3>
-                            <p class="text-neutral-500">Covering the ankle or higher, boots can be dressy, rugged, or designed for specific activities like hiking or riding.</p>
+                            <h3 className="mb-0 text-main-600">$95.25</h3>
+                            <p className="text-neutral-500">Covering the ankle or higher, boots can be dressy, rugged, or designed for specific activities like hiking or riding.</p>
                         </div>  
 
-                        <span class="d-block border border-neutral-30 border-dashed my-32"></span>
+                        <span className="d-block border border-neutral-30 border-dashed my-32"></span>
                         
-                        <div class="d-flex flex-column gap-32 align-items-start">
-                            <div class="d-flex align-items-center justify-content-between gap-8 w-100">
-                                <span class="text-lg text-neutral-700 fw-medium">Color</span>
-                                <div class="color-list d-flex flex-wrap align-items-center gap-12">
-                                    <button type="button" class="color-list__button w-24 h-24 bg-primary-600 rounded-circle"></button>
-                                    <button type="button" class="color-list__button w-24 h-24 bg-color-deep-green rounded-circle"></button>
-                                    <button type="button" class="color-list__button w-24 h-24 bg-color-violet rounded-circle"></button>
-                                    <button type="button" class="color-list__button w-24 h-24 bg-color-warning rounded-circle"></button>
-                                    <button type="button" class="color-list__button w-24 h-24 bg-color-black rounded-circle active"></button>
+                        <div className="d-flex flex-column gap-32 align-items-start">
+                            <div className="d-flex align-items-center justify-content-between gap-8 w-100">
+                                <span className="text-lg text-neutral-700 fw-medium">Color</span>
+                                <div className="color-list d-flex flex-wrap align-items-center gap-12">
+                                    <button type="button" className="color-list__button w-24 h-24 bg-primary-600 rounded-circle"></button>
+                                    <button type="button" className="color-list__button w-24 h-24 bg-color-deep-green rounded-circle"></button>
+                                    <button type="button" className="color-list__button w-24 h-24 bg-color-violet rounded-circle"></button>
+                                    <button type="button" className="color-list__button w-24 h-24 bg-color-warning rounded-circle"></button>
+                                    <button type="button" className="color-list__button w-24 h-24 bg-color-black rounded-circle active"></button>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between gap-8 w-100">
-                                <span class="text-lg text-neutral-700 fw-medium">Size</span>
-                                <select class="common-input w-auto bg-main-25 border border-main-100 rounded-pill">
+                            <div className="d-flex align-items-center justify-content-between gap-8 w-100">
+                                <span className="text-lg text-neutral-700 fw-medium">Size</span>
+                                <select className="common-input w-auto bg-main-25 border border-main-100 rounded-pill">
                                     <option value="32">32</option>
                                     <option value="24">24</option>
                                     <option value="16">16</option>
                                     <option value="8">8</option>
                                 </select>
                             </div>
-                            <div class="d-flex align-items-center justify-content-between gap-8 w-100">
-                                <span class="text-lg text-neutral-700 fw-medium">Quantity</span>
-                                <div class="border border-neutral-30 bg-main-25 rounded-pill p-4 max-w-116 w-100 d-flex justify-content-between">
-                                    <button type="button" class="quantity__minus item-active-effect transition-1 flex-shrink-0 text-md hover-text-white w-36 h-36 rounded-circle bg-white text-neutral-500 hover-bg-main-600 border border-neutral-30 hover-border-main-600 hover-text-white flex-center">
-                                        <i class="ph-bold ph-minus"></i>
+                            <div className="d-flex align-items-center justify-content-between gap-8 w-100">
+                                <span className="text-lg text-neutral-700 fw-medium">Quantity</span>
+                                <div className="border border-neutral-30 bg-main-25 rounded-pill p-4 max-w-116 w-100 d-flex justify-content-between">
+                                    <button type="button" className="quantity__minus item-active-effect transition-1 flex-shrink-0 text-md hover-text-white w-36 h-36 rounded-circle bg-white text-neutral-500 hover-bg-main-600 border border-neutral-30 hover-border-main-600 hover-text-white flex-center">
+                                        <i className="ph-bold ph-minus"></i>
                                     </button>
-                                    <input type="text" class="quantity__input flex-grow-1 common-input border-0 bg-transparent text-center text-lg fw-semibold text-neutral-700 p-0" value="1">
-                                    <button type="button" class="quantity__plus item-active-effect transition-1 flex-shrink-0 text-md hover-text-white w-36 h-36 rounded-circle bg-white text-neutral-500 hover-bg-main-600 border border-neutral-30 hover-border-main-600 hover-text-white flex-center">
-                                        <i class="ph-bold ph-plus"></i>
+                                    <input type="text" className="quantity__input flex-grow-1 common-input border-0 bg-transparent text-center text-lg fw-semibold text-neutral-700 p-0" value="1" />
+                                    <button type="button" className="quantity__plus item-active-effect transition-1 flex-shrink-0 text-md hover-text-white w-36 h-36 rounded-circle bg-white text-neutral-500 hover-bg-main-600 border border-neutral-30 hover-border-main-600 hover-text-white flex-center">
+                                        <i className="ph-bold ph-plus"></i>
                                     </button>
                                 </div>
                             </div>
                         </div>
                         
-                        <span class="d-block border border-neutral-30 border-dashed my-32"></span>
+                        <span className="d-block border border-neutral-30 border-dashed my-32"></span>
 
-                        <div class="d-flex gap-24">
-                            <a href="/cart" class="flex-grow-1 btn btn-main rounded-pill flex-align gap-8">
-                                <i class="ph ph-shopping-cart d-sm-flex d-none text-lg"></i>
+                        <div className="d-flex gap-24">
+                            <a href="/cart" className="flex-grow-1 btn btn-main rounded-pill flex-align gap-8">
+                                <i className="ph ph-shopping-cart d-sm-flex d-none text-lg"></i>
                                 Add To Cart
                             </a>
-                            <a href="/checkout" class="flex-grow-1 btn btn-outline-main rounded-pill flex-align gap-8">
-                                <i class="ph ph-tag d-sm-flex d-none text-lg"></i>
+                            <a href="/checkout" className="flex-grow-1 btn btn-outline-main rounded-pill flex-align gap-8">
+                                <i className="ph ph-tag d-sm-flex d-none text-lg"></i>
                                 Buy Now
                             </a>
                         </div>
-                        <div class="mt-32 flex-align gap-24 justify-content-center flex-wrap"> 
-                            <a href="javascript:void(0)" class="flex-align gap-12 text-neutral-500 hover-text-main-600 text-lg">
-                                <i class="ph-bold ph-arrows-left-right d-flex"></i>
+                        <div className="mt-32 flex-align gap-24 justify-content-center flex-wrap"> 
+                            <a href="#" className="flex-align gap-12 text-neutral-500 hover-text-main-600 text-lg">
+                                <i className="ph-bold ph-arrows-left-right d-flex"></i>
                                 Compare
                             </a>
-                            <a href="javascript:void(0)" class="flex-align gap-12 text-neutral-500 hover-text-main-600 text-lg">
-                                <i class="ph-bold ph-heart d-flex"></i>
+                            <a href="#" className="flex-align gap-12 text-neutral-500 hover-text-main-600 text-lg">
+                                <i className="ph-bold ph-heart d-flex"></i>
                                 Favorite
                             </a>
-                            <a href="javascript:void(0)" class="flex-align gap-12 text-neutral-500 hover-text-main-600 text-lg">
-                                <i class="ph-bold ph-share-network d-flex"></i>
+                            <a href="#" className="flex-align gap-12 text-neutral-500 hover-text-main-600 text-lg">
+                                <i className="ph-bold ph-share-network d-flex"></i>
                                 Share
                             </a>
                         </div>
@@ -793,119 +203,119 @@ export default function Page() {
                 </div>
             </div>
 
-            <div class="pt-120">
+            <div className="pt-120">
 
-                <!-- Overview Start -->
-                <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
+                {/* Overview Start */}
+                <div className="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
 
-                    <div class="d-flex align-items-center flex-wrap gap-32">
-                        <div class="bg-white rounded-16 p-32 d-flex justify-content-center align-items-center">
-                            <img src="/assets/images/thumbs/over-img.png" alt="">
+                    <div className="d-flex align-items-center flex-wrap gap-32">
+                        <div className="bg-white rounded-16 p-32 d-flex justify-content-center align-items-center">
+                            <img src="/assets/images/thumbs/over-img.png" alt="" />
                         </div>
-                        <div class="">
-                            <h3 class="mb-24">Overview</h3>
-                            <p class="text-neutral-500 max-w-454">Google Play Store, shortened to Play Store on the Home screen and App screen, is Google's official pre-installed app store on Android-certified devices.</p>
+                        <div className="">
+                            <h3 className="mb-24">Overview</h3>
+                            <p className="text-neutral-500 max-w-454">Google Play Store, shortened to Play Store on the Home screen and App screen, is Google's official pre-installed app store on Android-certified devices.</p>
                         </div>
                     </div>
                     
-                    <span class="d-block border border-neutral-30 border-dashed my-32"></span>
-                    <div class="">
-                        <h4 class="mb-16">Comfort is Key:</h4>
-                        <p class="text-neutral-500">When choosing an office chair, prioritize comfort. Look for chairs with ergonomic designs, adjustable features, and ample padding to ensure a comfortable seating experience, especially for long hours of work. Invest in a chair made from durable materials. A high-quality chair not only provides comfort but is also built to withstand daily use, ensuring longevity and value for your investment.</p>
+                    <span className="d-block border border-neutral-30 border-dashed my-32"></span>
+                    <div className="">
+                        <h4 className="mb-16">Comfort is Key:</h4>
+                        <p className="text-neutral-500">When choosing an office chair, prioritize comfort. Look for chairs with ergonomic designs, adjustable features, and ample padding to ensure a comfortable seating experience, especially for long hours of work. Invest in a chair made from durable materials. A high-quality chair not only provides comfort but is also built to withstand daily use, ensuring longevity and value for your investment.</p>
                     </div>
-                    <span class="d-block border border-neutral-30 border-dashed my-32"></span>
-                    <div class="">
-                        <h5 class="mb-16">Style and Aesthetics:</h5>
-                        <p class="text-neutral-500">Consider the aesthetics of the chair to complement the overall design of your workspace. Whether you prefer a modern, sleek look or a more traditional style, there are office chairs available to suit various tastes.</p>
+                    <span className="d-block border border-neutral-30 border-dashed my-32"></span>
+                    <div className="">
+                        <h5 className="mb-16">Style and Aesthetics:</h5>
+                        <p className="text-neutral-500">Consider the aesthetics of the chair to complement the overall design of your workspace. Whether you prefer a modern, sleek look or a more traditional style, there are office chairs available to suit various tastes.</p>
                     </div>
-                    <span class="d-block border border-neutral-30 border-dashed my-32"></span>
-                    <div class="">
-                        <h6 class="mb-16">Support for Good Posture:</h6>
-                        <p class="text-neutral-500">Look for chairs that promote good posture. Proper lumbar support and a design that encourages a neutral spine position contribute to maintaining a healthy and comfortable seated posture. Chairs with swivel functionality and smooth mobility are practical for dynamic work environments. This allows users to easily reach different areas of their workspace without straining.</p>
+                    <span className="d-block border border-neutral-30 border-dashed my-32"></span>
+                    <div className="">
+                        <h6 className="mb-16">Support for Good Posture:</h6>
+                        <p className="text-neutral-500">Look for chairs that promote good posture. Proper lumbar support and a design that encourages a neutral spine position contribute to maintaining a healthy and comfortable seated posture. Chairs with swivel functionality and smooth mobility are practical for dynamic work environments. This allows users to easily reach different areas of their workspace without straining.</p>
                     </div>
                     
                 </div>
-                <!-- Overview End -->
+                {/* Overview End */}
                 
                 
-                <!-- Reviews Start -->
-                <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
-                    <h5 class="mb-0">Average Reviews</h5>
-                    <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
+                {/* Reviews Start */}
+                <div className="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
+                    <h5 className="mb-0">Average Reviews</h5>
+                    <span className="d-block border border-neutral-30 my-32 border-dashed"></span>
 
-                    <div class="d-flex flex-sm-row flex-column gap-36">
-                        <div class="rounded-16 px-40 py-24 flex-center flex-column flex-shrink-0 text-center bg-main-600 text-white">
-                            <h2 class="mb-8 text-white">4.8</h2>
-                            <div class="flex-center gap-4">
-                                <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
-                                <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
-                                <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
-                                <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star"></i></span>
-                                <span class="text-15 fw-medium text-white d-flex"><i class="ph-fill ph-star-half"></i></span>
+                    <div className="d-flex flex-sm-row flex-column gap-36">
+                        <div className="rounded-16 px-40 py-24 flex-center flex-column flex-shrink-0 text-center bg-main-600 text-white">
+                            <h2 className="mb-8 text-white">4.8</h2>
+                            <div className="flex-center gap-4">
+                                <span className="text-15 fw-medium text-white d-flex"><i className="ph-fill ph-star"></i></span>
+                                <span className="text-15 fw-medium text-white d-flex"><i className="ph-fill ph-star"></i></span>
+                                <span className="text-15 fw-medium text-white d-flex"><i className="ph-fill ph-star"></i></span>
+                                <span className="text-15 fw-medium text-white d-flex"><i className="ph-fill ph-star"></i></span>
+                                <span className="text-15 fw-medium text-white d-flex"><i className="ph-fill ph-star-half"></i></span>
                             </div>
-                            <span class="mt-8 text-gray-500">26 Rating</span>
+                            <span className="mt-8 text-gray-500">26 Rating</span>
                         </div>
 
-                        <div class="flex-grow-1">
-                            <div class="flex-align gap-20 mb-8">
-                                <div class="flex-align gap-8">
-                                    <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                    <span class="text-gray-900 flex-shrink-0">5</span>
+                        <div className="flex-grow-1">
+                            <div className="flex-align gap-20 mb-8">
+                                <div className="flex-align gap-8">
+                                    <span className="text-lg fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                                    <span className="text-gray-900 flex-shrink-0">5</span>
                                 </div>
-                                <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar bg-main-600 rounded-pill" style="width: 90%"></div>
+                                <div className="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
+                                    <div className="progress-bar bg-main-600 rounded-pill" style={{"width":"90%"}}></div>
                                 </div>
-                                <span class="text-gray-900 flex-shrink-0">90%</span>
+                                <span className="text-gray-900 flex-shrink-0">90%</span>
                             </div>
-                            <div class="flex-align gap-20 mb-8">
-                                <div class="flex-align gap-8">
-                                    <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                    <span class="text-gray-900 flex-shrink-0">5</span>
+                            <div className="flex-align gap-20 mb-8">
+                                <div className="flex-align gap-8">
+                                    <span className="text-lg fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                                    <span className="text-gray-900 flex-shrink-0">5</span>
                                 </div>
-                                <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar bg-main-600 rounded-pill" style="width: 75%"></div>
+                                <div className="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
+                                    <div className="progress-bar bg-main-600 rounded-pill" style={{"width":"75%"}}></div>
                                 </div>
-                                <span class="text-gray-900 flex-shrink-0">75%</span>
+                                <span className="text-gray-900 flex-shrink-0">75%</span>
                             </div>
-                            <div class="flex-align gap-20 mb-8">
-                                <div class="flex-align gap-8">
-                                    <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                    <span class="text-gray-900 flex-shrink-0">5</span>
+                            <div className="flex-align gap-20 mb-8">
+                                <div className="flex-align gap-8">
+                                    <span className="text-lg fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                                    <span className="text-gray-900 flex-shrink-0">5</span>
                                 </div>
-                                <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar bg-main-600 rounded-pill" style="width: 67%"></div>
+                                <div className="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow={67} aria-valuemin={0} aria-valuemax={100}>
+                                    <div className="progress-bar bg-main-600 rounded-pill" style={{"width":"67%"}}></div>
                                 </div>
-                                <span class="text-gray-900 flex-shrink-0">67%</span>
+                                <span className="text-gray-900 flex-shrink-0">67%</span>
                             </div>
-                            <div class="flex-align gap-20 mb-8">
-                                <div class="flex-align gap-8">
-                                    <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                    <span class="text-gray-900 flex-shrink-0">5</span>
+                            <div className="flex-align gap-20 mb-8">
+                                <div className="flex-align gap-8">
+                                    <span className="text-lg fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                                    <span className="text-gray-900 flex-shrink-0">5</span>
                                 </div>
-                                <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar bg-main-600 rounded-pill" style="width: 44%"></div>
+                                <div className="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow={44} aria-valuemin={0} aria-valuemax={100}>
+                                    <div className="progress-bar bg-main-600 rounded-pill" style={{"width":"44%"}}></div>
                                 </div>
-                                <span class="text-gray-900 flex-shrink-0">44%</span>
+                                <span className="text-gray-900 flex-shrink-0">44%</span>
                             </div>
-                            <div class="flex-align gap-20">
-                                <div class="flex-align gap-8">
-                                    <span class="text-lg fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                    <span class="text-gray-900 flex-shrink-0">5</span>
+                            <div className="flex-align gap-20">
+                                <div className="flex-align gap-8">
+                                    <span className="text-lg fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                                    <span className="text-gray-900 flex-shrink-0">5</span>
                                 </div>
-                                <div class="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar bg-main-600 rounded-pill" style="width: 21%"></div>
+                                <div className="progress w-100 bg-white rounded-pill h-12" role="progressbar" aria-label="Basic example" aria-valuenow={21} aria-valuemin={0} aria-valuemax={100}>
+                                    <div className="progress-bar bg-main-600 rounded-pill" style={{"width":"21%"}}></div>
                                 </div>
-                                <span class="text-gray-900 flex-shrink-0">21%</span>
+                                <span className="text-gray-900 flex-shrink-0">21%</span>
                             </div>
                         </div>
                     </div>
-                    <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
-                    <div class="flex-between gap-16 flex-wrap mb-24">
-                        <h6 class="mb-0">All Reviews</h6>
-                        <div class="flex-align gap-16">
-                            <div class="flex-align gap-8">
-                                <span class="text-neutral-500 flex-shrink-0">Sort By :</span>
-                                <select class="form-select ps-20 pe-28 py-8 fw-medium rounded-pill bg-main-25 border border-neutral-30 text-neutral-700">
+                    <span className="d-block border border-neutral-30 my-32 border-dashed"></span>
+                    <div className="flex-between gap-16 flex-wrap mb-24">
+                        <h6 className="mb-0">All Reviews</h6>
+                        <div className="flex-align gap-16">
+                            <div className="flex-align gap-8">
+                                <span className="text-neutral-500 flex-shrink-0">Sort By :</span>
+                                <select className="form-select ps-20 pe-28 py-8 fw-medium rounded-pill bg-main-25 border border-neutral-30 text-neutral-700">
                                     <option value="1">Newest</option>
                                     <option value="1">Trending</option>
                                     <option value="1">Popular</option>
@@ -914,334 +324,180 @@ export default function Page() {
                         </div>
                     </div>
 
-                    <!-- Review Item -->
-                    <div class="border border-neutral-30 rounded-12 bg-white p-32">
-                        <div class="flex-align gap-8 mb-16">
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star-half"></i></span>
+                    {/* Review Item */}
+                    <div className="border border-neutral-30 rounded-12 bg-white p-32">
+                        <div className="flex-align gap-8 mb-16">
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star-half"></i></span>
                         </div>
-                        <p class="text-neutral-700">"This course was fantastic! The instructor's explanations were clear and concise, making it easy to understand even the more complex topics."</p>
-                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
-                        <div class="flex-align gap-24">
-                            <img src="/assets/images/thumbs/reviewer-img1.png" alt="" class="w-60 h-60 rounded-circle cover-img">
-                            <div class="">
-                                <h6 class="text-xl mb-8 fw-medium">Mary Johnson</h6>
-                                <span class="text-neutral-700 text-sm">Project Manager</span>
+                        <p className="text-neutral-700">"This course was fantastic! The instructor's explanations were clear and concise, making it easy to understand even the more complex topics."</p>
+                        <span className="d-block border border-neutral-30 my-24 border-dashed"></span>
+                        <div className="flex-align gap-24">
+                            <img src="/assets/images/thumbs/reviewer-img1.png" alt="" className="w-60 h-60 rounded-circle cover-img" />
+                            <div className="">
+                                <h6 className="text-xl mb-8 fw-medium">Mary Johnson</h6>
+                                <span className="text-neutral-700 text-sm">Project Manager</span>
                             </div>
                         </div>
-                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                        <span className="d-block border border-neutral-30 my-24 border-dashed"></span>
 
-                        <div class="flex-align flex-wrap gap-40">
-                            <button type="button" class="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
-                                <span class="like-button__icon text-xl d-flex"><i class="ph-bold ph-thumbs-up"></i></span>
-                                <span class="like-button__text">178</span>
+                        <div className="flex-align flex-wrap gap-40">
+                            <button type="button" className="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                <span className="like-button__icon text-xl d-flex"><i className="ph-bold ph-thumbs-up"></i></span>
+                                <span className="like-button__text">178</span>
                             </button>
-                            <a href="#commentForm" class="flex-align gap-8 text-neutral-500 hover-text-main-600">
-                                <i class="text-xl d-flex ph-bold ph-chat-centered-text"></i>
+                            <a href="#commentForm" className="flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                <i className="text-xl d-flex ph-bold ph-chat-centered-text"></i>
                                 Reply
                             </a>
                         </div>
-                        <div class="flex-align gap-20 mt-24">
-                            <img src="/assets/images/thumbs/reviewer-img2.png" alt="" class="w-60 h-60 rounded-circle cover-img">
-                            <input type="text" class="common-input rounded-pill bg-main-25 border-neutral-30 py-16" placeholder="Join the discussion...">
+                        <div className="flex-align gap-20 mt-24">
+                            <img src="/assets/images/thumbs/reviewer-img2.png" alt="" className="w-60 h-60 rounded-circle cover-img" />
+                            <input type="text" className="common-input rounded-pill bg-main-25 border-neutral-30 py-16" placeholder="Join the discussion..." />
                         </div>
                     </div>
-                    <!-- Review Item -->
+                    {/* Review Item */}
 
-                    <!-- Review Item -->
-                    <div class="border border-neutral-30 rounded-12 bg-white p-32 mt-24">
-                        <div class="flex-align gap-8 mb-16">
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star-half"></i></span>
+                    {/* Review Item */}
+                    <div className="border border-neutral-30 rounded-12 bg-white p-32 mt-24">
+                        <div className="flex-align gap-8 mb-16">
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star-half"></i></span>
                         </div>
-                        <p class="text-neutral-700">"Great course for beginners and advanced learners alike. The projects were particularly helpful in applying what I learned. Highly recommend!"</p>
-                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
-                        <div class="flex-align gap-24">
-                            <img src="/assets/images/thumbs/reviewer-img2.png" alt="" class="w-60 h-60 rounded-circle cover-img">
-                            <div class="">
-                                <h6 class="text-xl mb-8 fw-medium">Alice Brown</h6>
-                                <span class="text-neutral-700 text-sm">Software Developer</span>
+                        <p className="text-neutral-700">"Great course for beginners and advanced learners alike. The projects were particularly helpful in applying what I learned. Highly recommend!"</p>
+                        <span className="d-block border border-neutral-30 my-24 border-dashed"></span>
+                        <div className="flex-align gap-24">
+                            <img src="/assets/images/thumbs/reviewer-img2.png" alt="" className="w-60 h-60 rounded-circle cover-img" />
+                            <div className="">
+                                <h6 className="text-xl mb-8 fw-medium">Alice Brown</h6>
+                                <span className="text-neutral-700 text-sm">Software Developer</span>
                             </div>
                         </div>
-                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
+                        <span className="d-block border border-neutral-30 my-24 border-dashed"></span>
 
-                        <div class="flex-align flex-wrap gap-40">
-                            <button type="button" class="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
-                                <span class="like-button__icon text-xl d-flex"><i class="ph-bold ph-thumbs-up"></i></span>
-                                <span class="like-button__text">178</span>
+                        <div className="flex-align flex-wrap gap-40">
+                            <button type="button" className="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                <span className="like-button__icon text-xl d-flex"><i className="ph-bold ph-thumbs-up"></i></span>
+                                <span className="like-button__text">178</span>
                             </button>
-                            <a href="#commentForm" class="flex-align gap-8 text-neutral-500 hover-text-main-600">
-                                <i class="text-xl d-flex ph-bold ph-chat-centered-text"></i>
-                                Reply
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Review Item -->
-
-                    <!-- Review Item -->
-                    <div class="border border-neutral-30 rounded-12 bg-white p-32 mt-24">
-                        <div class="flex-align gap-8 mb-16">
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                            <span class="text-xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star-half"></i></span>
-                        </div>
-                        <p class="text-neutral-700">"Dr. Smith is an amazing instructor. Her real-world experience and teaching style made this course one of the best I've ever taken."</p>
-                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
-                        <div class="flex-align gap-24">
-                            <img src="/assets/images/thumbs/reviewer-img3.png" alt="" class="w-60 h-60 rounded-circle cover-img">
-                            <div class="">
-                                <h6 class="text-xl mb-8 fw-medium">David Wilson</h6>
-                                <span class="text-neutral-700 text-sm">Ethical Hacker</span>
-                            </div>
-                        </div>
-                        <span class="d-block border border-neutral-30 my-24 border-dashed"></span>
-
-                        <div class="flex-align flex-wrap gap-40">
-                            <button type="button" class="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
-                                <span class="like-button__icon text-xl d-flex"><i class="ph-bold ph-thumbs-up"></i></span>
-                                <span class="like-button__text">178</span>
-                            </button>
-                            <a href="#commentForm" class="flex-align gap-8 text-neutral-500 hover-text-main-600">
-                                <i class="text-xl d-flex ph-bold ph-chat-centered-text"></i>
+                            <a href="#commentForm" className="flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                <i className="text-xl d-flex ph-bold ph-chat-centered-text"></i>
                                 Reply
                             </a>
                         </div>
                     </div>
-                    <!-- Review Item -->
+                    {/* Review Item */}
 
-                    <button type="button" class="btn btn-main rounded-pill flex-center gap-8 mt-40">
+                    {/* Review Item */}
+                    <div className="border border-neutral-30 rounded-12 bg-white p-32 mt-24">
+                        <div className="flex-align gap-8 mb-16">
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star"></i></span>
+                            <span className="text-xl fw-medium text-warning-600 d-flex"><i className="ph-fill ph-star-half"></i></span>
+                        </div>
+                        <p className="text-neutral-700">"Dr. Smith is an amazing instructor. Her real-world experience and teaching style made this course one of the best I've ever taken."</p>
+                        <span className="d-block border border-neutral-30 my-24 border-dashed"></span>
+                        <div className="flex-align gap-24">
+                            <img src="/assets/images/thumbs/reviewer-img3.png" alt="" className="w-60 h-60 rounded-circle cover-img" />
+                            <div className="">
+                                <h6 className="text-xl mb-8 fw-medium">David Wilson</h6>
+                                <span className="text-neutral-700 text-sm">Ethical Hacker</span>
+                            </div>
+                        </div>
+                        <span className="d-block border border-neutral-30 my-24 border-dashed"></span>
+
+                        <div className="flex-align flex-wrap gap-40">
+                            <button type="button" className="like-button flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                <span className="like-button__icon text-xl d-flex"><i className="ph-bold ph-thumbs-up"></i></span>
+                                <span className="like-button__text">178</span>
+                            </button>
+                            <a href="#commentForm" className="flex-align gap-8 text-neutral-500 hover-text-main-600">
+                                <i className="text-xl d-flex ph-bold ph-chat-centered-text"></i>
+                                Reply
+                            </a>
+                        </div>
+                    </div>
+                    {/* Review Item */}
+
+                    <button type="button" className="btn btn-main rounded-pill flex-center gap-8 mt-40">
                         See All Reviews
-                        <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                        <i className="ph-bold ph-arrow-up-right d-flex text-lg"></i>
                     </button>
                 </div>
-                <!-- Reviews End -->
+                {/* Reviews End */}
 
-                <!-- Review Form Start -->
-                <div class="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
+                {/* Review Form Start */}
+                <div className="border border-neutral-30 rounded-12 bg-main-25 p-32 mt-24">
                     <form action="#" id="commentForm">
-                        <h5 class="mb-0">Write a Review</h5>
-                        <span class="d-block border border-neutral-30 my-32 border-dashed"></span>
-                        <div class="mb-24">
-                            <label for="name" class="text-neutral-700 text-lg fw-medium mb-12">Name </label>
-                            <input type="text" class="common-input rounded-pill" id="name" placeholder="Enter Name...">
+                        <h5 className="mb-0">Write a Review</h5>
+                        <span className="d-block border border-neutral-30 my-32 border-dashed"></span>
+                        <div className="mb-24">
+                            <label htmlFor="name" className="text-neutral-700 text-lg fw-medium mb-12">Name </label>
+                            <input type="text" className="common-input rounded-pill" id="name" placeholder="Enter Name..." />
                         </div>
-                        <div class="mb-24">
-                            <label for="email" class="text-neutral-700 text-lg fw-medium mb-12">Email </label>
-                            <input type="email" class="common-input rounded-pill" id="email" placeholder="Enter Email...">
+                        <div className="mb-24">
+                            <label htmlFor="email" className="text-neutral-700 text-lg fw-medium mb-12">Email </label>
+                            <input type="email" className="common-input rounded-pill" id="email" placeholder="Enter Email..." />
                         </div>
-                        <div class="mb-24">
-                            <label class="text-neutral-700 text-lg fw-medium mb-12">Star Reviews </label>
+                        <div className="mb-24">
+                            <label className="text-neutral-700 text-lg fw-medium mb-12">Star Reviews </label>
                             
                             <div id="half-star-rating">
-                                <div class="rating-group">
-                                    <input class="rating__input rating__input--none" checked="" name="rating2" id="rating2-0" value="0" type="radio">
-                                    <label aria-label="0 stars" class="rating__label" for="rating2-0">&nbsp;</label>
-                                    <label aria-label="0.5 stars" class="rating__label rating__label--half" for="rating2-05"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-05" value="0.5" type="radio">
-                                    <label aria-label="1 star" class="rating__label" for="rating2-10"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-10" value="1" type="radio">
-                                    <label aria-label="1.5 stars" class="rating__label rating__label--half" for="rating2-15"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-15" value="1.5" type="radio">
-                                    <label aria-label="2 stars" class="rating__label" for="rating2-20"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-20" value="2" type="radio">
-                                    <label aria-label="2.5 stars" class="rating__label rating__label--half" for="rating2-25"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-25" value="2.5" type="radio" checked="">
-                                    <label aria-label="3 stars" class="rating__label" for="rating2-30"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-30" value="3" type="radio">
-                                    <label aria-label="3.5 stars" class="rating__label rating__label--half" for="rating2-35"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-35" value="3.5" type="radio">
-                                    <label aria-label="4 stars" class="rating__label" for="rating2-40"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-40" value="4" type="radio">
-                                    <label aria-label="4.5 stars" class="rating__label rating__label--half" for="rating2-45"><i class="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-45" value="4.5" type="radio">
-                                    <label aria-label="5 stars" class="rating__label" for="rating2-50"><i class="rating__icon rating__icon--star ph-fill ph-star"></i></label>
-                                    <input class="rating__input" name="rating2" id="rating2-50" value="5" type="radio">
+                                <div className="rating-group">
+                                    <input className="rating__input rating__input--none" checked="" name="rating2" id="rating2-0" value="0" type="radio" />
+                                    <label aria-label="0 stars" className="rating__label" htmlFor="rating2-0">&nbsp;</label>
+                                    <label aria-label="0.5 stars" className="rating__label rating__label--half" htmlFor="rating2-05"><i className="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-05" value="0.5" type="radio" />
+                                    <label aria-label="1 star" className="rating__label" htmlFor="rating2-10"><i className="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-10" value="1" type="radio" />
+                                    <label aria-label="1.5 stars" className="rating__label rating__label--half" htmlFor="rating2-15"><i className="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-15" value="1.5" type="radio" />
+                                    <label aria-label="2 stars" className="rating__label" htmlFor="rating2-20"><i className="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-20" value="2" type="radio" />
+                                    <label aria-label="2.5 stars" className="rating__label rating__label--half" htmlFor="rating2-25"><i className="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-25" value="2.5" type="radio" checked="" />
+                                    <label aria-label="3 stars" className="rating__label" htmlFor="rating2-30"><i className="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-30" value="3" type="radio" />
+                                    <label aria-label="3.5 stars" className="rating__label rating__label--half" htmlFor="rating2-35"><i className="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-35" value="3.5" type="radio" />
+                                    <label aria-label="4 stars" className="rating__label" htmlFor="rating2-40"><i className="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-40" value="4" type="radio" />
+                                    <label aria-label="4.5 stars" className="rating__label rating__label--half" htmlFor="rating2-45"><i className="rating__icon rating__icon--star ph-fill ph-star-half"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-45" value="4.5" type="radio" />
+                                    <label aria-label="5 stars" className="rating__label" htmlFor="rating2-50"><i className="rating__icon rating__icon--star ph-fill ph-star"></i></label>
+                                    <input className="rating__input" name="rating2" id="rating2-50" value="5" type="radio" />
                                 </div>
                             </div>
 
                         </div>
-                        <div class="mb-24">
-                            <label for="desc" class="text-neutral-700 text-lg fw-medium mb-12">Your Question </label>
-                            <textarea id="desc" class="common-input rounded-24" placeholder="Write you question..."></textarea>
+                        <div className="mb-24">
+                            <label htmlFor="desc" className="text-neutral-700 text-lg fw-medium mb-12">Your Question </label>
+                            <textarea id="desc" className="common-input rounded-24" placeholder="Write you question..."></textarea>
                         </div>
-                        <div class="mb-0">
-                            <button type="submit" class="btn btn-main rounded-pill flex-center gap-8 mt-40">
+                        <div className="mb-0">
+                            <button type="submit" className="btn btn-main rounded-pill flex-center gap-8 mt-40">
                                 Submit Review
-                                <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
+                                <i className="ph-bold ph-arrow-up-right d-flex text-lg"></i>
                             </button>
                         </div>
                     </form>
                 </div>
-                <!-- Review Form End -->
+                {/* Review Form End */}
                 
             </div>
         </div>
     </section>
-    <!-- =============================== Products Details Section End ================================== -->
-
-    
-    
-<!-- ==================== Footer Start Here ==================== -->
-<footer class="footer bg-main-25 position-relative z-1">
-    <img src="/assets/images/shapes/shape2.png" alt="" class="shape five animation-scalation">
-    <img src="/assets/images/shapes/shape6.png" alt="" class="shape one animation-scalation">
-    
-    <div class="py-120 ">
-        <div class="container container-two">
-            <div class="row row-cols-xxl-5 row-cols-lg-3 row-cols-sm-2 row-cols-1 gy-5">
-                <div class="col" data-aos="fade-up" data-aos-duration="300" >
-                    <div class="footer-item">
-                        <div class="footer-item__logo">
-                            <a href="/"> <img src="/assets/images/logo/logo.png" alt=""></a>
-                        </div>
-                        <p class="my-32">EduAll exceeded all my expectations! The instructors were not only experts</p>
-                        <ul class="social-list flex-align gap-24">
-                            <li class="social-list__item">
-                                <a href="https://www.facebook.com" class="text-main-600 text-2xl hover-text-main-two-600"><i class="ph-bold ph-facebook-logo"></i></a>
-                            </li>
-                            <li class="social-list__item">
-                                <a href="https://www.twitter.com" class="text-main-600 text-2xl hover-text-main-two-600"> <i class="ph-bold ph-twitter-logo"></i></a>
-                            </li>
-                            <li class="social-list__item">
-                                <a href="https://www.linkedin.com" class="text-main-600 text-2xl hover-text-main-two-600"><i class="ph-bold ph-instagram-logo"></i></a>
-                            </li>
-                            <li class="social-list__item">
-                                <a href="https://www.pinterest.com" class="text-main-600 text-2xl hover-text-main-two-600"><i class="ph-bold ph-pinterest-logo"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="400" >
-                    <div class="footer-item">
-                        <h4 class="footer-item__title mb-32">Navigation</h4>
-                        <ul class="footer-menu">
-                            <li class="mb-16">
-                                <a href="/about" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">About us</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/courses" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Courses</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/instructor" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Instructor</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/faq" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">FAQs</a>
-                            </li>
-                            <li class="mb-0">
-                                <a href="/blog" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Blogs</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="600" >
-                    <div class="footer-item">
-                        <h4 class="footer-item__title mb-32">Category</h4>
-                        <ul class="footer-menu">
-                            <li class="mb-16">
-                                <a href="/courses" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">UI/UX Design</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/courses" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Web Development</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/courses" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Python Development</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/courses" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Digital Marketing</a>
-                            </li>
-                            <li class="mb-16">
-                                <a href="/courses" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Graphic Design</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="800" >
-                    <div class="footer-item">
-                        <h4 class="footer-item__title mb-32">Contact Us</h4>
-                        <div class="flex-align gap-20 mb-24">
-                            <span class="icon d-flex text-32 text-main-600"><i class="ph ph-phone"></i></span>
-                            <div class="">
-                                <a href="tel:(207)555-0119" class="text-neutral-500 d-block hover-text-main-600 mb-4">(207) 555-0119</a>
-                                <a href="tel:(704)555-0127" class="text-neutral-500 d-block hover-text-main-600 mb-0">(704) 555-0127</a>
-                            </div>
-                        </div>
-                        <div class="flex-align gap-20 mb-24">
-                            <span class="icon d-flex text-32 text-main-600"><i class="ph ph-envelope-open"></i></span>
-                            <div class="">
-                                <a href="mailto:dwallo@gmail.com" class="text-neutral-500 d-block hover-text-main-600 mb-4">dwallo@gmail.com</a>
-                                <a href="mailto:eduAll@gmail.com" class="text-neutral-500 d-block hover-text-main-600 mb-0">eduAll@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="flex-align gap-20 mb-24">
-                            <span class="icon d-flex text-32 text-main-600"><i class="ph ph-map-trifold"></i></span>
-                            <div class="">
-                                <span class="text-neutral-500 d-block mb-4">5488 srker Rd .</span>
-                                <span class="text-neutral-500 d-block mb-0">8745 doer Dr.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col" data-aos="fade-up" data-aos-duration="1000" >
-                    <div class="footer-item">
-                        <h4 class="footer-item__title mb-32">Subscribe Here</h4>
-                        <p class="text-neutral-500">Enter your email address to register to our newsletter subscription</p>
-                        <form action="#" class="mt-24 position-relative">
-                            <input type="email" class="form-control bg-white shadow-none border border-neutral-30 rounded-pill h-52 ps-24 pe-48 focus-border-main-600" placeholder="Email...">
-                            <button type="submit" class="w-36 h-36 flex-center rounded-circle bg-main-600 text-white hover-bg-main-800 position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
-                                <i class="ph ph-paper-plane-tilt"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <!-- bottom Footer -->
-        <div class="bottom-footer bg-main-25 border-top border-dashed border-main-100 border-0 py-32">
-            <div class="container container-two">
-                <div class="bottom-footer__inner flex-between gap-3 flex-wrap">
-                    <p class="bottom-footer__text"> Copyright &copy; 2024 <span class="fw-semibold">EduAll</span> All Rights Reserved.</p>
-                    <div class="footer-links">
-                        <a href="#" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Privacy Policy</a>
-                        <a href="#" class="text-neutral-500 hover-text-main-600 hover-text-decoration-underline">Terms & Conditions</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- ==================== Footer End Here ==================== -->
-  
-
-        <!-- Jquery js -->
-    <!-- -->
-    <!-- Bootstrap Bundle Js -->
-    <!-- select2 Js -->
-    <!-- Phosphor Icon Js -->
-    <!-- Slick js -->
-    <!-- Slick js -->
-    <!-- magnific popup -->
-    <!-- Jquery Ui js -->
-    <!-- marquee js -->
-    <!-- react charts-->
-    <!-- plyr Js -->
-    <!-- vanilla Tilt -->
-    <!-- Editor js Toolbar Start -->
-    <!-- dataTables -->
-    <!-- Tilt -->
-    <!-- wow -->
-    
-    <!-- main js -->`
-      }}
-    />
+    {/* =============================== Products Details Section End ================================== */}
+      
+      <Footer />
+    </>
   );
 }

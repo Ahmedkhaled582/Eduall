@@ -1,0 +1,304 @@
+import React from 'react';
+
+export default function StudentQuizSection() {
+  return (
+    <div className="w-100 animate-fade-in">
+      <div className="px-24 py-24 bg-white rounded-10">
+        <div className="d-flex align-items-center gap-16 justify-content-between">
+          <h6 className="mb-0">My Quiz Attempts</h6>
+          <button type="button" className="toggle-student-dashbord-button text-neutral-900 text-32 d-xl-none d-block">
+            <i className="ph-bold ph-list"></i>
+          </button>
+        </div>
+        <div className="mb-24">
+          <div className="overflow-y-auto">
+            <table id="example-five" className="display min-w-max w-100">
+              <thead>
+                <tr className="bg-main-25 border-bottom border-neutral-30">
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">Quiz</th>
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">Date</th>
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">Qus</th>
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">TM</th>
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">CA</th>
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">Result</th>
+                  <th className="text-12 fw-medium text-neutral-500 py-16 px-20">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Financial Planning for Millennials</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Brooklyn Simmons</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">4</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">7</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">1</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-success-50 px-20 py-8 border-neutral-30 border rounded-pill text-success-600">Pass</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Photography for Beginners</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Ralph Edwards</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">4</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">4</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">8</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-success-50 px-20 py-8 border-neutral-30 border rounded-pill text-success-600">Pass</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Adobe Photoshop Essentials</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Cameron Williamson</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">9</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">3</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">1</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-warning-30 px-20 py-8 border-neutral-30 border rounded-pill text-warning-600">Fail</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Leadership and Management Essentials</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Kristin Watson</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">6</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">1</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">2</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-success-50 px-20 py-8 border-neutral-30 border rounded-pill text-success-600">Pass</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Web Development Bootcamp</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Annette Black</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">4</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">1</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">6</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-success-50 px-20 py-8 border-neutral-30 border rounded-pill text-success-600">Pass</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Digital Marketing Fundamentals</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Courtney Henry</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">4</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">3</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">2</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-warning-30 px-20 py-8 border-neutral-30 border rounded-pill text-warning-600">Fail</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Digital Marketing 101</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Bessie Cooper</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">2</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">3</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">5</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-success-50 px-20 py-8 border-neutral-30 border rounded-pill text-success-600">Pass</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Introduction to Python Programming</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Albert Flores</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">6</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">3</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">8</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-warning-30 px-20 py-8 border-neutral-30 border rounded-pill text-warning-600">Fail</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Social Media Strategy</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Esther Howard</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">8</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">6</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">9</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-warning-30 px-20 py-8 border-neutral-30 border rounded-pill text-warning-600">Fail</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Project Management Fundamentals</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Jane Cooper</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">2</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">5</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">7</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-success-50 px-20 py-8 border-neutral-30 border rounded-pill text-success-600">Pass</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Social Media Strategy</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Jacob Jones</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">9</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">8</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">6</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-warning-30 px-20 py-8 border-neutral-30 border rounded-pill text-warning-600">Fail</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+
+                <tr className="hover-bg-neutral-20 border-bottom transition-03">
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <h4 className="fw-medium text-14 text-neutral-500 mb-1">Creative Writing Essentials</h4>
+                    <span className="fw-normal text-12 text-neutral-500">Cody Fisher</span>
+                  </td>
+                  <td className="text-14 fw-normal py-28 px-20 shadow-none line-height-105">January 20, 2025</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">1</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">6</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">5</td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <span className="bg-warning-30 px-20 py-8 border-neutral-30 border rounded-pill text-warning-600">Fail</span>
+                  </td>
+                  <td className="py-28 px-20 shadow-none line-height-105">
+                    <div className="d-flex align-items-center gap-12 justify-content-end">
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-pencil-simple-line"></i></button>
+                      <button type="button" className="text-24 text-neutral-500"><i className="ph-bold ph-trash"></i></button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="d-flex align-items-center gap-24 justify-content-between flex-wrap">
+          <div className="form-check form-switch">
+            <input className="form-check-input focus-box-shadow" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
+            <label className="form-check-label text-14 fw-normal text-neutral-500" htmlFor="flexSwitchCheckDefault">Dense</label>
+          </div>
+          <div className="d-flex align-items-center gap-40 flex-wrap">
+            <div className="d-flex align-items-center gap-16">
+              <span className="fw-normal text-14 text-neutral-500">Rows per page:</span>
+              <select className="form-select w-auto pe-32 text-14 fw-normal text-neutral-500 bg-transparent border-0">
+                <option value="1">12</option>
+                <option value="1">13</option>
+                <option value="1">11</option>
+                <option value="1">15</option>
+              </select>
+            </div>
+
+            <div className="d-flex align-items-center gap-16">
+              <span className="fw-normal text-14 text-neutral-500">1-12 of 100</span>
+              <div className="d-flex align-items-center gpa-8">
+                <span className="text-20 text-neutral-500">
+                  <i className="ph-bold ph-caret-left"></i>
+                </span>
+                <span className="text-20 text-neutral-500">
+                  <i className="ph-bold ph-caret-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
